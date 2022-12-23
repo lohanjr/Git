@@ -1,0 +1,1 @@
+Olá, esse será meu ´rimeiro projeto pessoal, onde irei aprender a como utilizar o Git / GitHub :)
