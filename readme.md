@@ -19,18 +19,20 @@ _-PS: Vou me basear na situação em que você já possui o(s) arquivo(s) do seu
 
 * Após isso, os arquivos adicionados entram em um modo de _"standing"_, sendo similar à uma sala de espera, apenas aguardando ser chamado, veremos o responsável por essa ação é o `git commit -m "here goes the title of your commit"`, sendo assim salva as alterações *localmente*, o _"-m"_ serve para adicionarmos um título/descricção do que está sendo feito e(ou) alterado.
 
-* `git branch -M "main"`
+*  Agora iremos nos atentar à nomenclatura do repositório. Podemos perceber no final do caminho de arquivos, o termo em parênteses "(master)", isso significa que, o ramo principal do projeto ou _branch_, está nomeada como 'master', como padrão, mas isso vem sendo mudado por X questões que você pode posteriormente se aprofundar caso queira. Portanto, usaremos o comando `git branch -M "main"`
 
 Agora precisamos criar um novo repositório em seu perfil do GitHub por algum navegador, no caminho: https://github.com/yourGitHubUserName?tab=repositories, basta você adicionar seu nome neste lugar: _"yourGitHubUserName"_, no botão verde *NOVO*.
 
 Após isso, teremos:
+<p><img src="imgs/repositorioGitExemplo.png"></p>
 
-    Imagem 1: Como podemos ver, devemos criar um repositório dessa forma.
-
+Como podemos ver, devemos criar um repositório dessa forma.
 
 Então chegaremos ao próximo passo:
+<p><img src="imgs/RemotePartGrifado.png"></p>
 
-    Imagem 2: Sendo assim, podemos avançar a próxima etapa.
-    PS: Se atente ao link grifado em vermelho.
+Sendo assim, podemos avançar a próxima etapa.
 
-* Com o link copiado, iremos novamente abrir o Git Bash e utilizar o código `git remote add origin https://github.com/lohanjr/GitExemplo.git`
+_PS: Se atente ao link grifado em vermelho._
+
+* Com o link copiado, iremos novamente abrir o Git Bash e utilizar o código `git remote add origin https://github.com/lohanjr/GitExemplo.git`, esse comando irá indicar o caminho do seu diretório para a conexão remota, como o nome já diz.
