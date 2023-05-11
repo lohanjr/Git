@@ -36,3 +36,9 @@ Sendo assim, podemos avançar a próxima etapa.
 _PS: Se atente ao link grifado em vermelho._
 
 * Com o link copiado, iremos novamente abrir o Git Bash e utilizar o código `git remote add origin https://github.com/lohanjr/GitExemplo.git`, esse comando irá indicar o caminho do seu diretório para a conexão remota, como o nome já diz.
+
+_PS: Para copiar a URL, use shift+insert ou dê 'right click' e depois clique na opção 'colar'._
+
+* Agora, basta fazermos o envio de fato, utilizando `git push -u origin main`. O _'-u'_ siginifica _upstream_, indica que, futuras mudanças necessitaram apenas do _git push_ para enviar as alterações locais para o repositório remoto.
+
+Com isso, temos o primeiro commit aplicado com **sucesso!!**
