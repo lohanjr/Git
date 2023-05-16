@@ -42,3 +42,21 @@ _PS: Para copiar a URL, use shift+insert ou dê 'right click' e depois clique na
 * Agora, basta fazermos o envio de fato, utilizando `git push -u origin main`. O _'-u'_ siginifica _upstream_, indica que, futuras mudanças necessitaram apenas do _git push_ para enviar as alterações locais para o repositório remoto.
 
 Com isso, temos o primeiro commit aplicado com **sucesso!!**
+## Modificando e Atualizando
+Iremos agora nos aprofundar nas técnicas de alteração de código. O estágio em que passamos mais tempo...
+
+Considere que após alguns dias, você queira adicionar algum conteúdo ao seu projeto, para isso, devemos então seguir alguns passos. Como não sei os arquivos que você possa ter subido ao seu repositório, irei criar o seguinte exemplo:
+
+<p><img src="imgs/criaçãoDeIndex_Readme.png"></p>
+
+Acima, criei 2 arquivos, um 'index.html' e um 'readme.md', ambos sem nada escrito. Perceba que existe um _U_ maiúsculo. Isso acontece pois estão "_Untracked_" ou não encontrados. Como podemos ver abaixo no GitBash também.
+
+<p><img src="imgs/gitBashUntrackedFiles.png"></p>
+
+- Para adicionarmos ao _stading_, iremos usar o comando `git add .`
+- Após isso, iremos comitar com uma frase descritiva `git commit -m "adição de arquivos html e readme"`
+- Agora, basta aplicarmos o `git push origin main` para enviarmos as mudanças para o repositório remoto.
+
+<p><img src="imgs/first_addCommit_e_Push.png"></p>
+
+**Prontinho!** Atualize (F5) sua página do GitHub para ver a atualização.
