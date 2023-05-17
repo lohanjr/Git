@@ -24,12 +24,12 @@ _-PS: Vou me basear na situação em que você já possui o(s) arquivo(s) do seu
 Agora precisamos criar um novo repositório em seu perfil do GitHub por algum navegador, no caminho: https://github.com/yourGitHubUserName?tab=repositories, basta você adicionar seu nome neste lugar: _"yourGitHubUserName"_, no botão verde *NOVO*.
 
 Após isso, teremos:
-<p><img src="imgs/repositorioGitExemplo.png"></p>
+![tela de criação de repo git](imgs/repositorioGitExemplo.png)
 
 Como podemos ver, devemos criar um repositório dessa forma.
 
 Então chegaremos ao próximo passo:
-<p><img src="imgs/RemotePartGrifado.png"></p>
+![link do repositório](imgs/RemotePartGrifado.png)
 
 Sendo assim, podemos avançar a próxima etapa.
 
@@ -47,16 +47,16 @@ Iremos agora nos aprofundar nas técnicas de alteração de código. O estágio 
 
 Considere que após alguns dias, você queira adicionar algum conteúdo ao seu projeto, para isso, devemos então seguir alguns passos. Como não sei os arquivos que você possa ter subido ao seu repositório, irei criar o seguinte exemplo:
 
-<p><img src="imgs/criaçãoDeIndex_Readme.png"></p>
+![touch index e readme](imgs/criaçãoDeIndex_Readme.png)
 
 Acima, criei 2 arquivos, um 'index.html' e um 'readme.md', ambos sem nada escrito. Perceba que existe um _U_ maiúsculo. Isso acontece pois estão "_Untracked_" ou não encontrados. Como podemos ver abaixo no GitBash também.
 
-<p><img src="imgs/gitBashUntrackedFiles.png"></p>
+![untracked files](imgs/gitBashUntrackedFiles.png)
 
 - Para adicionarmos ao _stading_, iremos usar o comando `git add .`
 - Após isso, iremos comitar com uma frase descritiva `git commit -m "adição de arquivos html e readme"`
 - Agora, basta aplicarmos o `git push origin main` para enviarmos as mudanças para o repositório remoto.
 
-<p><img src="imgs/first_addCommit_e_Push.png"></p>
+![add commit e push](imgs/first_addCommit_e_Push.png)
 
 **Prontinho!** Atualize (F5) sua página do GitHub para ver a atualização.
