@@ -4,14 +4,14 @@ Olá, irei colocar aqui alguns comandinhos e atalhos como dicas que venho aprend
 
 A lógica que iremos seguir será, estabelecer uma conexão entre seu repositório local ao remoto do _Github.com_! Para nos possibilitar segurança e versionamentos(alterações individuais ou em equipe) ao desenvolver o projeto.
 
-_-PS: Vou me basear na situação em que você já possui o(s) arquivo(s) do seu projeto salvo no seu dispositivo..._
+> _PS: Vou me basear na situação em que você já possui o(s) arquivo(s) do seu projeto salvo no seu dispositivo..._
 
-## Criando um novo repositório...
+## - Criando um novo repositório
 
 * Dê um `Git Bash Here` na pasta pai em que seus arquivos se encontram, o terminal irá se abrir já no caminho correto.
 
 * Dê um `git init`, para assim, inicializarmos um repositório vazio. O interessante é que se, no _Explorador de Arquivos_ clicarmos na opção "Vizualizar > Itens Ocultos". Poderemos ver que uma pasta oculta foi adicionada, com nome: <b>.git</b>
-- PS: Ela será responsável pela conexão, não a modifique.
+> _PS: Ela será responsável pela conexão, não a modifique._
 
 * Com o comando `git status`, poderemos ver a situação atual da configuração, nesse momento, irá aparecer os arquivos filhos presentes na pasta, com a situação: "Untracked" ou 'Não Rastreado', pois ainda não os adicionamos.
 
@@ -33,16 +33,16 @@ Então chegaremos ao próximo passo:
 
 Sendo assim, podemos avançar a próxima etapa.
 
-_PS: Se atente ao link grifado em vermelho._
+> _PS: Se atente ao link grifado em vermelho._
 
 * Com o link copiado, iremos novamente abrir o Git Bash e utilizar o código `git remote add origin https://github.com/lohanjr/GitExemplo.git`, esse comando irá indicar o caminho do seu diretório para a conexão remota, como o nome já diz.
 
-_PS: Para copiar a URL, use shift+insert ou dê 'right click' e depois clique na opção 'colar'._
+> _PS: Para copiar a URL, use shift+insert ou dê 'right click' e depois clique na opção 'colar'._
 
 * Agora, basta fazermos o envio de fato, utilizando `git push -u origin main`. O _'-u'_ siginifica _upstream_, indica que, futuras mudanças necessitaram apenas do _git push_ para enviar as alterações locais para o repositório remoto.
 
 Com isso, temos o primeiro commit aplicado com **sucesso!!**
-## Modificando e Atualizando
+## - Modificando e Atualizando
 Iremos agora nos aprofundar nas técnicas de alteração de código. O estágio em que passamos mais tempo...
 
 Considere que após alguns dias, você queira adicionar algum conteúdo ao seu projeto, para isso, devemos então seguir alguns passos. Como não sei os arquivos que você possa ter subido ao seu repositório, irei criar o seguinte exemplo:
@@ -60,3 +60,29 @@ Acima, criei 2 arquivos, um 'index.html' e um 'readme.md', ambos sem nada escrit
 ![add commit e push](imgs/first_addCommit_e_Push.png)
 
 **Prontinho!** Atualize (F5) sua página do GitHub para ver a atualização.
+
+## - Alterações de arquivo | `git diff`
+
+Após ter seus arquivos publicados na nuvem, o padrão será acontecer algumas modificações nele.<br>Para isso, temos o `git diff`, que nos mostra o que foi mudado _pré-commit_ (isso é importante!)<br>
+Digamos que eu tenha adicionado um _! + tab_ ao meu index.html...
+
+![git diff](./imgs/ideIndex!.png)
+
+O '_M_' significa _modified_, agora vamos usar o comando no Git Bash.
+
+![cmd git diff content](./imgs/cmdDiffImage.png)
+
+Conseguimos visualizar todo o conteúdo alterado pela linha de comando, super explicativo!!
+
+> Para a próxima explicação, leve em conta que irei comitar e dar push à essa modificação.
+
+## - Histórico de commits e seus autores | `git log`
+
+Quando falamos em ambientes de versionamento, o trabalho em equipe está incluso nisso, e para boas práticas de desenvolvimento de projetos, temos que manter um ambiente de codificação organizado.<br>
+Para isso, temos uma descrição detalhada do histórico de commits, quem o comitou e quando foi feita a alteração.
+
+* Usaremos o comando `git log` para isso.
+
+![git log no bash](./imgs/gitLogNoBash.png)
+
+Assim, temos um controle amplo sobre o projeto.
