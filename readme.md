@@ -53,6 +53,8 @@ Acima, criei 2 arquivos, um 'index.html' e um 'readme.md', ambos sem nada escrit
 
 ![untracked files](imgs/gitBashUntrackedFiles.png)
 
+> `git status` nos dá as informações gerais desse repositório.
+
 - Para adicionarmos ao _stading_, iremos usar o comando `git add .`
 - Após isso, iremos comitar com uma frase descritiva `git commit -m "adição de arquivos html e readme"`
 - Agora, basta aplicarmos o `git push origin main` para enviarmos as mudanças para o repositório remoto.
@@ -63,18 +65,43 @@ Acima, criei 2 arquivos, um 'index.html' e um 'readme.md', ambos sem nada escrit
 
 ## - Alterações de arquivo | `git diff`
 
-Após ter seus arquivos publicados na nuvem, o padrão será acontecer algumas modificações nele.<br>Para isso, temos o `git diff`, que nos mostra o que foi mudado _pré-commit_ (isso é importante!)<br>
-Digamos que eu tenha adicionado um _! + tab_ ao meu index.html...
+### - Saved but not Staged
+
+Quando salvamos remotamente um arquivo na nuvem, com o comando `push`, e posteriormente quisermos alterá-lo, podemos notar algumas informações do que foi, de fato, alterado.<br>Digamos que eu adicione o esqueleto padrão HTML com o atalho: _! + tab_.
 
 ![git diff](./imgs/ideIndex!.png)
 
-O '_M_' significa _modified_, agora vamos usar o comando no Git Bash.
+> O '_M_' significa _modified_, agora vamos usar o comando no Git Bash.
+
+Para visualizar as alterações, temos o comando:
+```
+git diff index.html
+```
+Que nos mostra o que foi mudado _"pré-commit"_ ou antes do staged (isso é importante!)<br>
 
 ![cmd git diff content](./imgs/cmdDiffImage.png)
 
-Conseguimos visualizar todo o conteúdo alterado pela linha de comando, super explicativo!!
+Conseguimos visualizar todo o conteúdo alterado pela linha de comando, super explicativo.
 
 > Para a próxima explicação, leve em conta que irei comitar e dar push à essa modificação.
+
+### *Staged*
+
+Ao alterar o arquivo e usar o comando `git add`, o arquivo se encontrará na área de stading. E o comando para compararmos as mudanças será um pouco diferente.
+
+Irei adicionar um título h1 ao meu body:
+
+![git diff -r HEAD](./imgs/gitDiff-rHEAD.png)
+
+Basta usarmos o comando a seguir para identificarmos as mudanças no arquivo index.html, caso o seu arquivo tenha um nome diferente, basta colocá-lo no lugar.
+
+```
+git diff -r HEAD index.html
+```
+
+Temos então o mesmo resultado mostrado na command line.
+
+![git log no bash](./imgs/gitDiff-rHEADcommandLine.png)
 
 ## - Histórico de commits e seus autores | `git log`
 
