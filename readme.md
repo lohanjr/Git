@@ -1,21 +1,40 @@
 # Aprendendo a utilizar o Git/GitHub :)
 
-Olá, irei colocar aqui alguns comandinhos e atalhos como dicas que venho aprendendo.
+Olá, irei colocar aqui alguns comandinhos, atalhos e dicas🤩 do que venho aprendendo com o Git.
 
-A lógica que iremos seguir será, estabelecer uma conexão entre seu repositório local ao remoto do _Github.com_! Para nos possibilitar segurança e versionamentos(alterações individuais ou em equipe) ao desenvolver o projeto.
+A lógica que iremos seguir, será estabelecer uma conexão entre seu repositório local ao remoto do _Github.com_! Para nos possibilitar segurança, facilidade e versionamentos(alterações individuais ou em equipe) ao desenvolver o projeto.
 
 > _PS: Vou me basear na situação em que você já possui o(s) arquivo(s) do seu projeto salvo no seu dispositivo..._
 
 ## - Criando um novo repositório
 
-* Dê um `Git Bash Here` na pasta pai em que seus arquivos se encontram, o terminal irá se abrir já no caminho correto.
+* Escolha um diretório em sua pasta de arquivos, onde você irá criar seu novo repositório.</br>Já dentro dela, clique com o botão direito e dê um `Git Bash Here` na pasta pai em que seus arquivos se encontram, o terminal irá se abrir já no caminho correto.
 
-* Dê um `git init`, para assim, inicializarmos um repositório vazio. O interessante é que se, no _Explorador de Arquivos_ clicarmos na opção "Vizualizar > Itens Ocultos". Poderemos ver que uma pasta oculta foi adicionada, com nome: <b>.git</b>
+* Use o comando:
+```
+git init
+```
+Iniciando assim, um repositório vazio. O interessante é que se, no _Explorador de Arquivos_ clicarmos na opção "Vizualizar > Itens Ocultos". Poderemos ver que uma pasta oculta foi adicionada, com nome: <b>.git</b>
 > _PS: Ela será responsável pela conexão, não a modifique._
 
-* Com o comando `git status`, poderemos ver a situação atual da configuração, nesse momento, irá aparecer os arquivos filhos presentes na pasta, com a situação: "Untracked" ou 'Não Rastreado', pois ainda não os adicionamos.
+* Com o comando
+```
+git status
+```
+Poderemos ver a situação atual da configuração, nesse momento, irá aparecer os arquivos filhos presentes na pasta, com a situação: "Untracked" ou 'Não Rastreado', pois ainda não os adicionamos.
 
-* Iremos fazer esse passo, com o comando `git add <your_file>`, caso haja mais de uma pasta de arquivo, insira o nome da primeira e dê um espaço e assim sucessivamente, até chegar ao final.
+* Iremos fazer esse passo, com o comando: 
+```
+git add filename
+```
+Caso haja mais de um arquivo, e você queira adicionar todos, use o comando:
+```
+git add .
+```
+Caso tenha vários arquivos mas você queira adicionar somente algum deles, insira o nome dos respectivos arquivos um por um, separados por espaço, até chegar ao último arquivo.
+```
+git add filenameone filenametwo filenamethree
+```
 
 * Após isso, os arquivos adicionados entram em um modo de _"standing"_, sendo similar à uma sala de espera, apenas aguardando ser chamado, veremos o responsável por essa ação é o `git commit -m "here goes the title of your commit"`, sendo assim salva as alterações *localmente*, o _"-m"_ serve para adicionarmos um título/descricção do que está sendo feito e(ou) alterado.
 
@@ -39,7 +58,7 @@ Sendo assim, podemos avançar a próxima etapa.
 
 > _PS: Para copiar a URL, use shift+insert ou dê 'right click' e depois clique na opção 'colar'._
 
-* Agora, basta fazermos o envio de fato, utilizando `git push -u origin main`. O _'-u'_ siginifica _upstream_, indica que, futuras mudanças necessitaram apenas do _git push_ para enviar as alterações locais para o repositório remoto.
+* Agora, basta fazermos o envio de fato, utilizando `git push -u origin main`. O _'-u'_ siginifica _upstream_, indica que, futuras mudanças necessitarão apenas do _git push_ para enviar as alterações locais para o repositório remoto.
 
 Com isso, temos o primeiro commit aplicado com **sucesso!!**
 ## - Modificando e Atualizando
