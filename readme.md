@@ -4,13 +4,47 @@ Olá, irei colocar aqui alguns comandinhos e atalhos como dicas que venho aprend
 
 A lógica que iremos seguir será, estabelecer uma conexão entre seu repositório local ao remoto do _Github.com_! Para nos possibilitar segurança e versionamentos(alterações individuais ou em equipe) ao desenvolver o projeto.
 
-> _PS: Vou me basear na situação em que você já possui o(s) arquivo(s) do seu projeto salvo no seu dispositivo..._
+> _PS: Vou me basear na situação em que você irá criar um repositório novo, um que não tenha arquivos..._
 
 ## - Criando um novo repositório
 
-* Dê um `Git Bash Here` na pasta pai em que seus arquivos se encontram, o terminal irá se abrir já no caminho correto.
+* Ao acessar sua conta do GitHub, na página inicial, você irá clicar no botão _New._
 
-* Dê um `git init`, para assim, inicializarmos um repositório vazio. O interessante é que se, no _Explorador de Arquivos_ clicarmos na opção "Vizualizar > Itens Ocultos". Poderemos ver que uma pasta oculta foi adicionada, com nome: <b>.git</b>
+![tela inicial GitHub](imgs/gitHubHomePage.png)
+
+* Após isso, você terá que nomear o seu novo repositório e, caso queira, adicionar uma descrição a ele.
+
+![tela de criação de repo git](imgs/repositorioGitExemplo.png)
+
+> Não iremos marcar a opção de _Add a README file_ agora, pois iremos abordar esse assunto posteriormente.
+
+Sendo assim, já criamos o repositório remoto no servidor do GitHub, basta conectarmos os arquivos que iremos criar na nossa máquina a ele. E para fazer isso, vamos utilizar a linha de comandos Git Bash e seguir alguns passos que o GitHub nos fornece.
+
+![link do repositório](imgs/RemotePartGrifado.png)
+
+O link grifado em vermelho, é o URL do repositório Git remoto no GitHub, que é usada para fazermos a conexão entre o local e remoto, sendo super importante.</br>
+E iremos utilizar os comandos que foram contornados em verde, para conluirmos a conexão e envio de arquivos.</br>Vamos agora, para a área de trabalho, para termos um ambiente visualmente limpo para iniciarmos.
+
+![link do repositório](imgs/openingGitBashCommandLine.png)
+
+* Use o botão direito do mouse e clique em _Git Bash Here_, a linha de comando então será aberta. Agora, você terá que escolher ou criar uma pasta, onde iremos criar nossos arquivos e dar ínicio ao repositório local.
+
+![link do repositório](imgs/fileManagerPath.png)
+
+* Após decidir o diretório, basta copiar o caminho e colá-lo no Git Bash, com o comando:
+```bash
+cd "C:\Lohan\Estudo\gitExemplo"
+```
+
+![link do repositório](imgs/changingDirectoryBash.png)
+
+> `pwd` nos mostra em qual caminho nos encontramos no momento
+
+Note que o meu caminho será C:\Lohan\Estudo\gitExemplo, basta substituir pelo seu!
+
+
+
+<!-- * Dê um `git init`, para assim, inicializarmos um repositório vazio. O interessante é que se, no _Explorador de Arquivos_ clicarmos na opção "Vizualizar > Itens Ocultos". Poderemos ver que uma pasta oculta foi adicionada, com nome: <b>.git</b>
 > _PS: Ela será responsável pela conexão, não a modifique._
 
 * Com o comando `git status`, poderemos ver a situação atual da configuração, nesse momento, irá aparecer os arquivos filhos presentes na pasta, com a situação: "Untracked" ou 'Não Rastreado', pois ainda não os adicionamos.
@@ -41,7 +75,8 @@ Sendo assim, podemos avançar a próxima etapa.
 
 * Agora, basta fazermos o envio de fato, utilizando `git push -u origin main`. O _'-u'_ siginifica _upstream_, indica que, futuras mudanças necessitaram apenas do _git push_ para enviar as alterações locais para o repositório remoto.
 
-Com isso, temos o primeiro commit aplicado com **sucesso!!**
+Com isso, temos o primeiro commit aplicado com **sucesso!!** -->
+
 ## - Modificando e Atualizando
 Iremos agora nos aprofundar nas técnicas de alteração de código. O estágio em que passamos mais tempo...
 
