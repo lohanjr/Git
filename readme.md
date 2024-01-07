@@ -52,7 +52,7 @@ Note que o meu caminho será C:\gitExemplo, basta substituir pelo seu!
 
 * De volta ao console do Bash, iremos dividir a tela com o Explorador de Arquivos, ambos programas no mesmo caminho, para visualizarmos o que irá acontecer. 
 
-![error not a git repository](imgs/errorNotaGitRepository.png)
+![error not a git repository](imgs/errorNotAgitRepository.png)
 
 > No Explorador de Arquivos, clique na opção "Vizualizar > Itens Ocultos"
 
