@@ -23,7 +23,11 @@ Sendo assim, já criamos o repositório remoto no servidor do GitHub, basta cone
 ![link do repositório](imgs/RemotePartGrifado.png)
 
 O link grifado em vermelho, é o URL do repositório Git remoto no GitHub, que é usada para fazermos a conexão entre o local e remoto, sendo super importante.</br>
-E iremos utilizar os comandos que foram contornados em verde, para conluirmos a conexão e envio de arquivos.</br>Vamos agora, para a área de trabalho, para termos um ambiente visualmente limpo para iniciarmos.
+E iremos utilizar os comandos que foram contornados em verde, para concluirmos a conexão e envio de arquivos.
+
+## Escolhendo o diretório
+
+Vamos agora, para a área de trabalho, para termos um ambiente visualmente limpo para iniciarmos.
 
 ![link do repositório](imgs/openingGitBashCommandLine.png)
 
@@ -33,40 +37,85 @@ E iremos utilizar os comandos que foram contornados em verde, para conluirmos a 
 
 * Após decidir o diretório, basta copiar o caminho e colá-lo no Git Bash, com o comando:
 ```bash
-cd "C:\Lohan\Estudo\gitExemplo"
+cd "C:\gitExemplo"
 ```
 
 ![link do repositório](imgs/changingDirectoryBash.png)
 
 > `pwd` nos mostra em qual caminho nos encontramos no momento
 
-Note que o meu caminho será C:\Lohan\Estudo\gitExemplo, basta substituir pelo seu!
+> `code .` abre o diretório em que estamos no Visual Studio Code
 
+Note que o meu caminho será C:\gitExemplo, basta substituir pelo seu!
 
+## Iniciando repositório git
 
-<!-- * Dê um `git init`, para assim, inicializarmos um repositório vazio. O interessante é que se, no _Explorador de Arquivos_ clicarmos na opção "Vizualizar > Itens Ocultos". Poderemos ver que uma pasta oculta foi adicionada, com nome: <b>.git</b>
-> _PS: Ela será responsável pela conexão, não a modifique._
+* De volta ao console do Bash, iremos dividir a tela com o Explorador de Arquivos, ambos programas no mesmo caminho, para visualizarmos o que irá acontecer. 
 
-* Com o comando
-```
+![error not a git repository](imgs/errorNotaGitRepository.png)
+
+> No Explorador de Arquivos, clique na opção "Vizualizar > Itens Ocultos"
+
+No Bash, dê um:
+
+```bash
 git status
 ```
-Poderemos ver a situação atual da configuração, nesse momento, irá aparecer os arquivos filhos presentes na pasta, com a situação: "Untracked" ou 'Não Rastreado', pois ainda não os adicionamos.
 
-* Iremos fazer esse passo, com o comando: 
+Com esse comando, recebemos o feedback do status geral do repositório, informações como: status de arquivos adicionados, branch atual etc.</br>E podemos ver na resposta grifada em amarelo, que o diretório ainda não é um repositório git.</br>Agora, iremos criar de fato o repositório, com o comando:
+
+```bash
+git init
 ```
+
+Para assim, inicializarmos um repositório vazio.
+
+![git init](imgs/gitInit.png)
+
+* O interessante é que após esse comando, poderemos ver grifada em amarelo, que uma pasta oculta foi adicionada, com nome: <b>.git</b>
+> _PS: Ela será responsável pela conexão, não a modifique._
+
+## Criando os primeiros arquivos
+
+Iremos agora, clicar em _New File..._ e escolher um nome para o arquivo e o tipo do arquivo, que no caso, será _.md_ 
+
+![creating new file vs code](imgs/givingAnameToTheNewFile.png)
+
+O nome que irei escolher será o padrão para esse tipo de arquivo, _README.md_.</br>Agora, iremos colocar um título à esse MarkDown (md):
+
+Perceba que está aparecendo a letra em verde _U_, ela significa que o arquivo se encontra _Untracked_ ou "Não Rastreado", pois ainda não o adicionamos.
+
+![adding content](imgs/addingFirstContentToTheFile.png)
+
+* Para isso, iremos utilizar o seguinte comando: 
+
+```bash
 git add filename
 ```
+
+> O _filename_ no caso, é _README.md_, basta substituir.
+
+---
+### Dicas:
+
+
 Caso haja mais de um arquivo, e você queira adicionar todos, use o comando:
-```
+
+```bash
 git add .
 ```
+
 Caso tenha vários arquivos mas você queira adicionar somente algum deles, insira o nome dos respectivos arquivos um por um, separados por espaço, até chegar ao último arquivo.
-```
+
+```bash
 git add filenameone filenametwo filenamethree
 ```
 
-* Após isso, os arquivos adicionados entram em um modo de _"standing"_, sendo similar à uma sala de espera, apenas aguardando ser chamado, veremos o responsável por essa ação é o `git commit -m "here goes the title of your commit"`, sendo assim salva as alterações *localmente*, o _"-m"_ serve para adicionarmos um título/descricção do que está sendo feito e(ou) alterado.
+---
+
+* Após isso, os arquivos adicionados entram em um modo de _"standing"_, sendo similar à uma sala de espera, apenas aguardando serem chamados para o _commit_.
+
+<!-- responsável por essa ação é o `git commit -m "here goes the title of your commit"`, sendo assim salva as alterações *localmente*, o _"-m"_ serve para adicionarmos um título/descricção do que está sendo feito e(ou) alterado.
 
 *  Agora iremos nos atentar à nomenclatura do repositório. Podemos perceber no final do caminho de arquivos, o termo em parênteses "(master)", isso significa que, o ramo principal do projeto ou _branch_, está nomeada como 'master', como padrão, mas isso vem sendo mudado por X questões que você pode posteriormente se aprofundar caso queira. Portanto, usaremos o comando `git branch -M "main"`
 
@@ -90,7 +139,12 @@ Sendo assim, podemos avançar a próxima etapa.
 
 * Agora, basta fazermos o envio de fato, utilizando `git push -u origin main`. O _'-u'_ siginifica _upstream_, indica que, futuras mudanças necessitaram apenas do _git push_ para enviar as alterações locais para o repositório remoto.
 
-Com isso, temos o primeiro commit aplicado com **sucesso!!** -->
+Com isso, temos o primeiro commit aplicado com **sucesso!!**
+
+---
+---
+---
+-->
 
 ## - Modificando e Atualizando
 Iremos agora nos aprofundar nas técnicas de alteração de código. O estágio em que passamos mais tempo...
