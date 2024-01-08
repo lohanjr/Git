@@ -81,13 +81,17 @@ Iremos agora, clicar em _New File..._ e escolher um nome para o arquivo e o tipo
 
 ![creating new file vs code](imgs/givingAnameToTheNewFile.png)
 
-O nome que irei escolher será o padrão para esse tipo de arquivo, _README.md_.</br>Agora, iremos colocar um título à esse MarkDown (md):
+O nome que irei escolher será o padrão para esse tipo de arquivo, _README.md_.
 
-Perceba que está aparecendo a letra em verde _U_, ela significa que o arquivo se encontra _Untracked_ ou "Não Rastreado", pois ainda não o adicionamos.
+> Perceba que ao nomear o arquivo, no _Explorar de Arquivos_ já irá aparecer o arquivo. 
+
+Agora, iremos escrever um texto dentro desse MarkDown (md):
 
 ![adding content](imgs/addingFirstContentToTheFile.png)
 
-* Para isso, iremos utilizar o seguinte comando: 
+Perceba que está aparecendo a letra em verde _U_, ela significa que o arquivo se encontra _Untracked_ ou "Não Rastreado", pois ainda não o adicionamos.
+
+* Para isso, iremos utilizar o seguinte comando no Bash: 
 
 ```bash
 git add filename
@@ -95,9 +99,12 @@ git add filename
 
 > O _filename_ no caso, é _README.md_, basta substituir.
 
----
-### Dicas:
+* Agora, iremos usar o atalho: _Ctrl + L_ para limpar o console e em seguida, vamos adicionar os arquivos.
 
+![git add readme](imgs/gitAddReadme.png)
+
+---
+### Dicas `git add`:
 
 Caso haja mais de um arquivo, e você queira adicionar todos, use o comando:
 
@@ -113,11 +120,29 @@ git add filenameone filenametwo filenamethree
 
 ---
 
-* Após isso, os arquivos adicionados entram em um modo de _"standing"_, sendo similar à uma sala de espera, apenas aguardando serem chamados para o _commit_.
+* Após isso, os arquivos adicionados entram em um modo de _"standing"_, sendo similar à uma sala de espera, apenas aguardando serem chamados para o _commit_.</br>E, usando no Bash, o comando:
 
-<!-- responsável por essa ação é o `git commit -m "here goes the title of your commit"`, sendo assim salva as alterações *localmente*, o _"-m"_ serve para adicionarmos um título/descricção do que está sendo feito e(ou) alterado.
+```bash
+git commit -m "meu primeiro commit aprendendo git" 
+```
 
-*  Agora iremos nos atentar à nomenclatura do repositório. Podemos perceber no final do caminho de arquivos, o termo em parênteses "(master)", isso significa que, o ramo principal do projeto ou _branch_, está nomeada como 'master', como padrão, mas isso vem sendo mudado por X questões que você pode posteriormente se aprofundar caso queira. Portanto, usaremos o comando `git branch -M "main"`
+![git add readme](imgs/gitCommit.png)
+
+Sendo assim, salvo as alterações <b>localmente!</b> O _"-m"_ serve para adicionarmos uma descrição _"message"_ do que está sendo feito e(ou) alterado.
+
+* Agora iremos nos atentar à nomenclatura do repositório.</br>Vemos no final do caminho de arquivos, o termo em parênteses "(master)", isso significa que, o ramo principal do projeto ou _branch_, está nomeada como 'master', como padrão, mas isso vem sendo mudado por X questões que você pode posteriormente se aprofundar caso queira.</br>Portanto, usaremos o comando:
+ 
+```bash
+git branch -M main
+```
+
+![git branch -M main](imgs/gitBranch-Mmain.png)
+
+Perceba que, aonde está circulado em vermelho, vemos que o nome da branch foi alterada.
+
+> O comando `git branch` é usado para sabermos em qual branch nos encontramos
+
+<!-- 
 
 Agora precisamos criar um novo repositório em seu perfil do GitHub por algum navegador, no caminho: https://github.com/yourGitHubUserName?tab=repositories, basta você adicionar seu nome neste lugar: _"yourGitHubUserName"_, no botão verde *NOVO*.
 
