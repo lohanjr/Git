@@ -142,34 +142,26 @@ Perceba que, aonde está circulado em vermelho, vemos que o nome da branch foi a
 
 > O comando `git branch` é usado para sabermos em qual branch nos encontramos
 
-<!-- 
+* Agora, iremos voltar à página do GitHub e copiar a URL do repositório (basta substituir pela sua), pois precisamos indicar o caminho do diretório para a conexão remota.</br>Para isso, vamos utilizar, no Bash, o comando:
 
-Agora precisamos criar um novo repositório em seu perfil do GitHub por algum navegador, no caminho: https://github.com/yourGitHubUserName?tab=repositories, basta você adicionar seu nome neste lugar: _"yourGitHubUserName"_, no botão verde *NOVO*.
+```bash
+git remote add origin https://github.com/lohanjr/gitExemplo.git
+```
 
-Após isso, teremos:
-![tela de criação de repo git](imgs/repositorioGitExemplo.png)
+> Para colar a URL no terminal, use _shift+Insert._
 
-Como podemos ver, devemos criar um repositório dessa forma.
+* Agora, basta fazermos o _push_.
 
-Então chegaremos ao próximo passo:
-![link do repositório](imgs/RemotePartGrifado.png)
+```bash
+git push -u origin main
+```
 
-Sendo assim, podemos avançar a próxima etapa.
+![git branch -M main](imgs/gitPush-uOriginMain.png)
 
-> _PS: Se atente ao link grifado em vermelho._
 
-* Com o link copiado, iremos novamente abrir o Git Bash e utilizar o código `git remote add origin https://github.com/lohanjr/GitExemplo.git`, esse comando irá indicar o caminho do seu diretório para a conexão remota, como o nome já diz.
-
-> _PS: Para copiar a URL, use shift+insert ou dê 'right click' e depois clique na opção 'colar'._
-
-* Agora, basta fazermos o envio de fato, utilizando `git push -u origin main`. O _'-u'_ siginifica _upstream_, indica que, futuras mudanças necessitaram apenas do _git push_ para enviar as alterações locais para o repositório remoto.
+O _-u_ siginifica _upstream_, indica que, futuras mudanças necessitarão apenas do _git push_ para enviar as alterações locais para o repositório remoto.
 
 Com isso, temos o primeiro commit aplicado com **sucesso!!**
-
----
----
----
--->
 
 ## - Modificando e Atualizando
 Iremos agora nos aprofundar nas técnicas de alteração de código. O estágio em que passamos mais tempo...
@@ -235,9 +227,9 @@ Temos então o mesmo resultado mostrado na command line.
 ## - Histórico de commits e seus autores | `git log`
 
 Quando falamos em ambientes de versionamento, o trabalho em equipe está incluso nisso, e para boas práticas de desenvolvimento de projetos, temos que manter um ambiente de codificação organizado.<br>
-Para isso, temos uma descrição detalhada do histórico de commits, quem o comitou e quando foi feita a alteração.
+Com o uso desse comando, temos uma descrição detalhada do histórico de commits.
 
-* Usaremos o comando `git log` para isso.
+* Usaremos o comando `git log` para isso. Mostrando assim, todos os commits feitos no repositório, em ordem cornológica, começando pelo mais antigo. Nos mostra o commit hash, o autor, a data e a mensagem do commit.
 
 ![git log no bash](./imgs/gitLogNoBash.png)
 
