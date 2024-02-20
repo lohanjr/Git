@@ -163,6 +163,7 @@ O _-u_ siginifica _upstream_, indica que, futuras mudanças necessitarão apenas
 
 Com isso, temos o primeiro commit aplicado com **sucesso!!**
 
+<!--
 ## - Modificando e Atualizando
 Iremos agora nos aprofundar nas técnicas de alteração de código. O estágio em que passamos mais tempo...
 
@@ -229,8 +230,9 @@ Temos então o mesmo resultado mostrado na command line.
 Quando falamos em ambientes de versionamento, o trabalho em equipe está incluso nisso, e para boas práticas de desenvolvimento de projetos, temos que manter um ambiente de codificação organizado.<br>
 Com o uso desse comando, temos uma descrição detalhada do histórico de commits.
 
-* Usaremos o comando `git log` para isso. Mostrando assim, todos os commits feitos no repositório, em ordem cornológica, começando pelo mais antigo. Nos mostra o commit hash, o autor, a data e a mensagem do commit.
+* Usaremos o comando `git log` para isso. Mostrando assim, todos os commits feitos no repositório, em ordem cronológica, começando pelo mais recente. Nos mostra o commit hash, o autor, a data e a mensagem do commit.
 
 ![git log no bash](./imgs/gitLogNoBash.png)
 
 Assim, temos um controle amplo sobre o projeto.
+!-->
